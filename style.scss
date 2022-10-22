@@ -1,0 +1,139 @@
+@import "partials/partials",
+url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+// General Classes
+body {
+    font-family: $ff-body;
+    font-size: 15px;
+    background-color: $clr-neutral-blue-dark-very;
+    margin-inline: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: white;
+    margin: 1rem 0 0.5rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+//buttons
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .btn {
+        width: 3rem;
+        height: 3rem;
+        font-weight: $fw-bold;
+        padding-top: 0.2rem;
+        border: none;
+        border-radius: 50%;
+        background-color: $clr-neutral-blue-dark;
+        cursor: pointer;
+        transition: 0.3s;
+        color: $clr-neutral-grey-medium;
+
+        &:hover {
+            background-color: $clr-primary-orange;
+            color: #fff;
+        }
+
+        &:focus {
+            background-color: $clr-neutral-grey-light;
+            color: #fff;
+
+        }
+    }
+
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: $clr-primary-orange;
+    padding: 0.8rem 0 0.6rem;
+    border: none;
+    border-radius: 100vmax;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        color: $clr-primary-orange;
+        background-color: white;
+    }
+}
+
+// Utility Classes
+
+%container {
+    background-color: hsl(215, 23%, 14%);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    max-width: 25rem;
+}
+
+.main-container {
+    img {
+        background-color: $clr-neutral-blue-dark;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+
+    p {
+        color: $clr-neutral-grey-medium;
+        margin-bottom: 1.5rem;
+    }
+
+    @extend %container;
+}
+
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img {
+        display: block;
+        margin: 1rem auto 2rem;
+    }
+
+    p {
+        color: $clr-neutral-grey-medium;
+        margin-bottom: 2rem;
+
+        &.grey {
+            color: hsla(25, 100%, 63%, 0.733);
+            background-color: $clr-neutral-blue-dark;
+            border-radius: 100vmax;
+            padding: 0.1rem 0.7rem 0;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    h2 {
+        color: white;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    @extend %container;
+}
+
+.hidden {
+    display: none;
+}
